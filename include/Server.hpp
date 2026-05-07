@@ -1,4 +1,6 @@
 #pragma once
+#include <Logger.hpp>
+
 #include <httplib.h>
 #include <nlohmann/json.hpp>
 
@@ -8,6 +10,7 @@ typedef nlohmann::json json;
 class Server {
 public:
 	Server();
+	Server(const Logger&& logger);
 
 	void get(const std::string& route, Handler handle);
 	void post(const std::string& route, Handler handle);
@@ -21,5 +24,6 @@ private:
 
 private:
 	httplib::Server _srv;
+	Logger _logger;
 
 };

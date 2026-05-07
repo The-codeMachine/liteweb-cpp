@@ -1,49 +1,68 @@
-#include <Logger.hpp>
+#include "Logger.hpp"
 
-#include <chrono>
+#include <filesystem>
 
-Logger::Logger(const std::string& file_location, const std::string& file_prefix, int max_files, uint32_t rotation_period) :
-	_file_location(file_location), _file_prefix(file_prefix), _max_files(max_files), _rotation_period(rotation_period) {}
+Logger::Logger(const std::string& file_location, const std::string& file_prefix, int max_files) {
+    std::filesystem::create_directories(file_location);
 
+    std::string file =
+        file_location + "/" + file_prefix + ".log";
 
-void Logger::changeFileLocation(const std::string& file_location) {
-	_file_location = file_location;
+    /*
+        Rotates every day at midnight.
+
+        Keeps max_files old logs.
+    */
+    auto sink =
+        std::make_shared<spdlog::sinks::daily_file_sink_mt>(
+            file,
+            0,
+            0,
+            false,
+            max_files
+        );
+
+    _logger =
+        std::make_shared<spdlog::logger>(
+            file_prefix,
+            sink
+        );
+
+    _logger->set_pattern(
+        "[%Y-%m-%d %H:%M:%S] [%^%l%$] %v"
+    );
+
+    _logger->flush_on(spdlog::level::info);
+
+    spdlog::register_logger(_logger);
 }
 
-void Logger::changeMaxFiles(int max_files) {
-	_max_files = max_files;
+spdlog::level::level_enum
+Logger::_convert_level(LogLevel level) {
+    switch (level) {
+    case LogLevel::INFO:
+        return spdlog::level::info;
+
+    case LogLevel::WARNING:
+        return spdlog::level::warn;
+
+    case LogLevel::DEBUG:
+        return spdlog::level::debug;
+
+    case LogLevel::SECURITY:
+        return spdlog::level::critical;
+
+    default:
+        return spdlog::level::info;
+    }
 }
 
-void Logger::changeRotationPeriod(uint32_t rotation_period) {
-	_rotation_period = rotation_period;
-}
-
-uint64_t Logger::_get_current_time() {
-	auto now = std::chrono::system_clock::now();
-	auto duration = now.time_since_epoch();
-
-	uint64_t seconds = std::chrono::duration_cast<std::chrono::seconds>(duration).count();
-
-	return seconds;
-}
-
-void Logger::_rotate() {
-    uint64_t currentTime = _get_current_time();
-
-    std::chrono::sys_time<std::chrono::seconds> tp{ std::chrono::seconds{currentTime} };
-    auto day = floor<std::chrono::days>(tp);
-    std::chrono::year_month_day ymd{ day };
-
-    _last_log = currentTime;
-
-    // Convert to integers safely
-    int y = int(ymd.year());
-    unsigned m = unsigned(ymd.month());
-    unsigned d = unsigned(ymd.day());
-
-    // Proper string construction
-    _current_file_location = _file_location + "/" + _file_prefix + "_" +
-        std::to_string(y) + "_" +
-        std::to_string(m) + "_" +
-        std::to_string(d);
+void Logger::log(
+    const std::string& message,
+    LogLevel level
+) {
+    _logger->log(
+        _convert_level(level),
+        message
+    );
 }

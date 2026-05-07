@@ -3,7 +3,8 @@
 #include <filesystem>
 #include <fstream>
 
-Server::Server() : _srv(httplib::Server()) {}
+Server::Server() : _srv(httplib::Server()), _logger(Logger("logs/", "server")) {}
+Server::Server(const Logger&& logger) : _srv(httplib::Server()), _logger(logger) {}
 
 // starts a post route with custom logic
 void Server::post(const std::string& route, Handler handle) {
@@ -24,8 +25,7 @@ void Server::loadPage(const std::string& route, const std::string& file_path) {
 
 	}
 	catch (const std::exception& e) {
-		// will add logging later
-		std::cout << "There was an exception in the loadPage function, Server.cpp " << e.what() << "\n";
+		_logger.log("There was an exception in the loadPage function, Server.cpp" + std::string(e.what()));
 	}
 
 	_srv.Get(route, [html_content](const httplib::Request& req, httplib::Response& res) {
