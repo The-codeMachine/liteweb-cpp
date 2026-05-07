@@ -7,6 +7,20 @@
 typedef httplib::Server::Handler Handler;
 typedef nlohmann::json json;
 
+/// <summary>
+/// 
+/// Server is a wrapper class around Httplib's server class. It allows you
+/// to add a GET, POST, and page routes. Servers can listen on any unused port. 
+/// Server's errors, and other information is automatically logged. 
+/// 
+/// Operations: 
+///  - Server can be created from nothing, or using your own custom logger (to specify the file location, and prefix).
+///  - Server can add a GET route, or a POST route.
+///  - Server errors are automatically logger (either using your own, or under logs/time_server.log)
+///  - Server can load an HTML page as a GET route. 
+///  - Server can start listening to on a specified port. 
+/// 
+/// </summary>
 class Server {
 public:
 	Server();

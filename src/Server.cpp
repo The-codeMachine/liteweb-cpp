@@ -3,7 +3,10 @@
 #include <filesystem>
 #include <fstream>
 
+// Automatically created logger
 Server::Server() : _srv(httplib::Server()), _logger(Logger("logs/", "server")) {}
+
+// Created with specified logger
 Server::Server(const Logger&& logger) : _srv(httplib::Server()), _logger(logger) {}
 
 // starts a post route with custom logic

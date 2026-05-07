@@ -14,6 +14,16 @@ enum class LogLevel {
     SECURITY
 };
 
+/// <summary>
+/// 
+/// This logger rotates daily with a maximum of 7 files (by default, can be overridden). The logger
+/// uses spdlog to log. 
+/// 
+/// Operations include:
+///  - Generates a new Logger with a specified file location, file prefix, and max files (optional)
+///  - Log into the file (uses spdlog)
+/// 
+/// </summary>
 class Logger {
 public:
     Logger(
@@ -22,13 +32,11 @@ public:
         int max_files = 7
     );
 
-    void log(const std::string& message,
-        LogLevel level = LogLevel::INFO);
+    void log(const std::string& message, LogLevel level = LogLevel::INFO);
 
 private:
     std::shared_ptr<spdlog::logger> _logger;
 
 private:
-    static spdlog::level::level_enum
-        _convert_level(LogLevel level);
+    static spdlog::level::level_enum _convert_level(LogLevel level);
 };

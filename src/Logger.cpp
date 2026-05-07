@@ -2,11 +2,11 @@
 
 #include <filesystem>
 
+// Generates the correct sinks (for spdlog)
 Logger::Logger(const std::string& file_location, const std::string& file_prefix, int max_files) {
     std::filesystem::create_directories(file_location);
 
-    std::string file =
-        file_location + "/" + file_prefix + ".log";
+    std::string file = file_location + "/" + file_prefix + ".log";
 
     /*
         Rotates every day at midnight.
@@ -37,6 +37,7 @@ Logger::Logger(const std::string& file_location, const std::string& file_prefix,
     spdlog::register_logger(_logger);
 }
 
+// converts the LogLevel into a spdlog::level::level_enum
 spdlog::level::level_enum
 Logger::_convert_level(LogLevel level) {
     switch (level) {
@@ -57,10 +58,8 @@ Logger::_convert_level(LogLevel level) {
     }
 }
 
-void Logger::log(
-    const std::string& message,
-    LogLevel level
-) {
+// logs the message with a level flag
+void Logger::log(const std::string& message, LogLevel level) {
     _logger->log(
         _convert_level(level),
         message
