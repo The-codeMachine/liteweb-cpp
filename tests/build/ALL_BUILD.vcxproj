@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{14125A65-9DBE-3040-94AC-D0FDC4DE6F1A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Developer\Projects\liteweb-cpp\tests\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Developer/Projects/liteweb-cpp/tests/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Developer\Libs\CMake\bin\cmake.exe -SD:/Developer/Projects/liteweb-cpp/tests -BD:/Developer/Projects/liteweb-cpp/tests/build --check-stamp-file D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeCInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Compiler\MSVC-C.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Internal\CMakeCLinkerInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Linker\MSVC-C.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-C.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-C.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;D:\Developer\Projects\liteweb-cpp\tests\build\CMakeFiles\4.1.0-rc3\CMakeCCompiler.cmake;D:\Developer\Projects\liteweb-cpp\tests\build\CMakeFiles\4.1.0-rc3\CMakeCXXCompiler.cmake;D:\Developer\Projects\liteweb-cpp\tests\build\CMakeFiles\4.1.0-rc3\CMakeRCCompiler.cmake;D:\Developer\Projects\liteweb-cpp\tests\build\CMakeFiles\4.1.0-rc3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Developer\Projects\liteweb-cpp\tests\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Developer/Projects/liteweb-cpp/tests/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Developer\Libs\CMake\bin\cmake.exe -SD:/Developer/Projects/liteweb-cpp/tests -BD:/Developer/Projects/liteweb-cpp/tests/build --check-stamp-file D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeCInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Compiler\MSVC-C.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Internal\CMakeCLinkerInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Linker\MSVC-C.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-C.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-C.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;D:\Developer\Projects\liteweb-cpp\tests\build\CMakeFiles\4.1.0-rc3\CMakeCCompiler.cmake;D:\Developer\Projects\liteweb-cpp\tests\build\CMakeFiles\4.1.0-rc3\CMakeCXXCompiler.cmake;D:\Developer\Projects\liteweb-cpp\tests\build\CMakeFiles\4.1.0-rc3\CMakeRCCompiler.cmake;D:\Developer\Projects\liteweb-cpp\tests\build\CMakeFiles\4.1.0-rc3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Developer\Projects\liteweb-cpp\tests\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Developer/Projects/liteweb-cpp/tests/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Developer\Libs\CMake\bin\cmake.exe -SD:/Developer/Projects/liteweb-cpp/tests -BD:/Developer/Projects/liteweb-cpp/tests/build --check-stamp-file D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeCInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Compiler\MSVC-C.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Internal\CMakeCLinkerInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Linker\MSVC-C.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-C.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-C.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;D:\Developer\Projects\liteweb-cpp\tests\build\CMakeFiles\4.1.0-rc3\CMakeCCompiler.cmake;D:\Developer\Projects\liteweb-cpp\tests\build\CMakeFiles\4.1.0-rc3\CMakeCXXCompiler.cmake;D:\Developer\Projects\liteweb-cpp\tests\build\CMakeFiles\4.1.0-rc3\CMakeRCCompiler.cmake;D:\Developer\Projects\liteweb-cpp\tests\build\CMakeFiles\4.1.0-rc3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Developer\Projects\liteweb-cpp\tests\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Developer/Projects/liteweb-cpp/tests/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Developer\Libs\CMake\bin\cmake.exe -SD:/Developer/Projects/liteweb-cpp/tests -BD:/Developer/Projects/liteweb-cpp/tests/build --check-stamp-file D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeCInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Compiler\MSVC-C.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Internal\CMakeCLinkerInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Linker\MSVC-C.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-C.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-C.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;D:\Developer\Libs\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;D:\Developer\Projects\liteweb-cpp\tests\build\CMakeFiles\4.1.0-rc3\CMakeCCompiler.cmake;D:\Developer\Projects\liteweb-cpp\tests\build\CMakeFiles\4.1.0-rc3\CMakeCXXCompiler.cmake;D:\Developer\Projects\liteweb-cpp\tests\build\CMakeFiles\4.1.0-rc3\CMakeRCCompiler.cmake;D:\Developer\Projects\liteweb-cpp\tests\build\CMakeFiles\4.1.0-rc3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Developer\Projects\liteweb-cpp\tests\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="D:\Developer\Projects\liteweb-cpp\tests\build\ZERO_CHECK.vcxproj">
+      <Project>{FF7B9812-54AC-3A02-9DFD-63702049629E}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Developer\Projects\liteweb-cpp\tests\build\logger_test.vcxproj">
+      <Project>{75990C89-959B-3D11-8A47-299FD33F8810}</Project>
+      <Name>logger_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Developer\Projects\liteweb-cpp\tests\build\server_test.vcxproj">
+      <Project>{757BFD51-8D8D-3EDA-BA19-F831E7DC9941}</Project>
+      <Name>server_test</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

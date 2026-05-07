@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Developer\Projects\liteweb-cpp\tests\build\CMakeFiles\26ed38111edc00bc8e47a23a828ee9ea\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{EC3C5D76-0E41-3356-B6FB-3E889AB40A98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,4 @@
+D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/logger_test.dir
+D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/server_test.dir
+D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/ALL_BUILD.dir
+D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/ZERO_CHECK.dir
