@@ -1,5 +1,7 @@
 #include "../include/Logger.hpp"
 #include <iostream>
+#include <thread>
+#include <chrono>
 
 int main() {
     Logger logger("test_logs/", "log_tests");
@@ -14,6 +16,9 @@ int main() {
 
     logger.log("idk what to call this", LogLevel::UNKNOWN);
 
+    std::this_thread::sleep_for(std::chrono::minutes(6));
+
+    logger.log("this should be in a new file", LogLevel::INFO);
 
     return 0;
 }

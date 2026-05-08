@@ -26,12 +26,16 @@ enum class LogLevel {
 /// </summary>
 class Logger {
 public:
-    Logger(const std::string& file_location, const std::string& file_prefix, int max_files = 7);
+    Logger(const std::string& file_location, const std::string& file_prefix, 
+        int rotation_hour = 0, int rotation_minute = 0, int max_files = 7);
 
     void log(const std::string& message, LogLevel level = LogLevel::INFO);
 
 private:
     static spdlog::level::level_enum _convert_level(LogLevel level);
+
+    static std::shared_ptr<spdlog::logger> _generate_logger(const std::string& file_location, const std::string& file_prefix,
+        int rotation_hour, int rotation_minute, int max_files);
 
 private:
     std::shared_ptr<spdlog::logger> _logger;
