@@ -17,7 +17,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /utf-8")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /utf-8")
 
 add_executable(logger_test logger_test.cpp)
-add_executable(server_test server_test.cpp)
+add_executable(server_test server_test.cpp ../src/server.cpp)
 
 target_link_libraries(logger_test PRIVATE liteweb-cpp)
 target_link_libraries(server_test PRIVATE liteweb-cpp)

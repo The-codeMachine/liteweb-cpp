@@ -4,6 +4,9 @@
     <ClCompile Include="D:\Developer\Projects\liteweb-cpp\tests\server_test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\Developer\Projects\liteweb-cpp\src\server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="D:\Developer\Projects\liteweb-cpp\tests\CMakeLists.txt" />

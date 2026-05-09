@@ -357,6 +357,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="D:\Developer\Projects\liteweb-cpp\tests\server_test.cpp" />
+    <ClCompile Include="D:\Developer\Projects\liteweb-cpp\src\server.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
