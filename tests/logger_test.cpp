@@ -1,24 +1,38 @@
 #include "../include/Logger.hpp"
+
+#include <spdlog/sinks/rotating_file_sink.h>
+
 #include <iostream>
 #include <thread>
+#include <vector> 
 #include <chrono>
 
 int main() {
-    Logger logger("test_logs/", "log_tests");
+    // rotation test
+    std::cout << "Logger rotation test\n";
 
-    logger.log("Test log");
+    auto sink = std::make_shared<spdlog::sinks::rotating_file_sink_mt>("test_logs/rotation_test.log", 128, 3);
 
-    logger.log("very cool log message", LogLevel::WARNING);
+    liteweb_cpp::Logger logger(sink, "rotation_test");
 
-    logger.log("big big debugging message", LogLevel::DEBUG);
+    for (int i = 0; i < 1000; ++i) {
+        logger.logf(liteweb_cpp::LogLevel::Info, "Message {}", i);
+    }
 
-    logger.log("security_warning", LogLevel::SECURITY);
+    // concurrency test
+    std::cout << "Logger concurrency test\n";
 
-    logger.log("idk what to call this", LogLevel::UNKNOWN);
+    std::vector<std::thread> threads;
+    for (int i = 0; i < 16; ++i) {
+        threads.emplace_back([&]() {
+            for (int j = 0; j < 10000; ++j) {
+                logger.log("thread test");
+            }
+        });
+    }
 
-    std::this_thread::sleep_for(std::chrono::minutes(6));
-
-    logger.log("this should be in a new file", LogLevel::INFO);
+    for (auto& t : threads)
+        t.join();
 
     return 0;
 }

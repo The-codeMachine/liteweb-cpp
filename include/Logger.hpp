@@ -49,7 +49,7 @@ namespace liteweb_cpp{
 
         template<typename... Args>
         void logf(LogLevel level, fmt::format_string<Args...> fmt, Args&&... args) {
-            _logger->log(_convert_level(level), fmt, std::forward<Args>(args));
+            _logger->log(_convert_level(level), fmt, std::forward<Args...>(args...));
         }
 
         void flush();

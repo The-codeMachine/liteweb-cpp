@@ -5,7 +5,7 @@ events:
     kind: "message-v1"
     backtrace:
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:212 (message)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:3 (project)"
     message: |
       The system is: Windows - 10.0.26200 - AMD64
   -
@@ -16,7 +16,7 @@ events:
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:3 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -35,6 +35,7 @@ events:
     found: "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeCCompilerId.c.in"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\reysl\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.2\\bin\\x64"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.2\\bin"
         - "C:\\WINDOWS\\system32"
@@ -76,7 +77,7 @@ events:
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
       Compiler:  
@@ -86,7 +87,7 @@ events:
       The output was:
       0
       MSBuild version 17.14.40+3e7442088 for .NET Framework
-      Build started 2026-05-07 6:46:11 AM.
+      Build started 2026-05-09 4:07:05 PM.
       
       Project "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\4.1.0-rc3\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -124,7 +125,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:02.68
+      Time Elapsed 00:00:04.19
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -141,7 +142,7 @@ events:
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "_CMAKE_TOOL_WITH_PATH"
     description: "Path to a program."
@@ -157,6 +158,7 @@ events:
       - "link"
     candidate_directories:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Users/reysl/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/x64/"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/"
       - "C:/Windows/System32/"
@@ -196,6 +198,7 @@ events:
     found: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\reysl\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.2\\bin\\x64"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.2\\bin"
         - "C:\\WINDOWS\\system32"
@@ -238,7 +241,7 @@ events:
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "_CMAKE_TOOL_WITH_PATH"
     description: "Path to a program."
@@ -254,6 +257,7 @@ events:
       - "lld-link"
     candidate_directories:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Users/reysl/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/x64/"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/"
       - "C:/Windows/System32/"
@@ -292,6 +296,9 @@ events:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.com"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.exe"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link"
+      - "C:/Users/reysl/AppData/Local/Programs/Microsoft VS Code/lld-link.com"
+      - "C:/Users/reysl/AppData/Local/Programs/Microsoft VS Code/lld-link.exe"
+      - "C:/Users/reysl/AppData/Local/Programs/Microsoft VS Code/lld-link"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/x64/lld-link.com"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/x64/lld-link.exe"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/x64/lld-link"
@@ -397,6 +404,7 @@ events:
     found: false
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\reysl\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.2\\bin\\x64"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.2\\bin"
         - "C:\\WINDOWS\\system32"
@@ -437,7 +445,7 @@ events:
     backtrace:
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_LINKER"
     description: "Path to a program."
@@ -453,6 +461,7 @@ events:
       - "link"
     candidate_directories:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Users/reysl/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/x64/"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/"
       - "C:/Windows/System32/"
@@ -492,6 +501,7 @@ events:
     found: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\reysl\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.2\\bin\\x64"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.2\\bin"
         - "C:\\WINDOWS\\system32"
@@ -532,7 +542,7 @@ events:
     backtrace:
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_MT"
     description: "Path to a program."
@@ -548,6 +558,7 @@ events:
       - "mt"
     candidate_directories:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Users/reysl/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/x64/"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/"
       - "C:/Windows/System32/"
@@ -586,6 +597,9 @@ events:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/mt.com"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/mt.exe"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/mt"
+      - "C:/Users/reysl/AppData/Local/Programs/Microsoft VS Code/mt.com"
+      - "C:/Users/reysl/AppData/Local/Programs/Microsoft VS Code/mt.exe"
+      - "C:/Users/reysl/AppData/Local/Programs/Microsoft VS Code/mt"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/x64/mt.com"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/x64/mt.exe"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/x64/mt"
@@ -691,6 +705,7 @@ events:
     found: false
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\reysl\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.2\\bin\\x64"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.2\\bin"
         - "C:\\WINDOWS\\system32"
@@ -731,7 +746,7 @@ events:
     backtrace:
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_AR"
     description: "Path to a program."
@@ -747,6 +762,7 @@ events:
       - "lib"
     candidate_directories:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Users/reysl/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/x64/"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/"
       - "C:/Windows/System32/"
@@ -786,6 +802,7 @@ events:
     found: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lib.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\reysl\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.2\\bin\\x64"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.2\\bin"
         - "C:\\WINDOWS\\system32"
@@ -829,7 +846,7 @@ events:
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:3 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -848,6 +865,7 @@ events:
     found: "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\reysl\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.2\\bin\\x64"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.2\\bin"
         - "C:\\WINDOWS\\system32"
@@ -889,7 +907,7 @@ events:
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler:  
@@ -899,7 +917,7 @@ events:
       The output was:
       0
       MSBuild version 17.14.40+3e7442088 for .NET Framework
-      Build started 2026-05-07 6:46:14 AM.
+      Build started 2026-05-09 4:07:09 PM.
       
       Project "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\4.1.0-rc3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -937,7 +955,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.81
+      Time Elapsed 00:00:00.72
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -954,7 +972,7 @@ events:
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "_CMAKE_TOOL_WITH_PATH"
     description: "Path to a program."
@@ -970,6 +988,7 @@ events:
       - "lld-link"
     candidate_directories:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Users/reysl/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/x64/"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/"
       - "C:/Windows/System32/"
@@ -1008,6 +1027,9 @@ events:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.com"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.exe"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link"
+      - "C:/Users/reysl/AppData/Local/Programs/Microsoft VS Code/lld-link.com"
+      - "C:/Users/reysl/AppData/Local/Programs/Microsoft VS Code/lld-link.exe"
+      - "C:/Users/reysl/AppData/Local/Programs/Microsoft VS Code/lld-link"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/x64/lld-link.com"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/x64/lld-link.exe"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/x64/lld-link"
@@ -1113,6 +1135,7 @@ events:
     found: false
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\reysl\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.2\\bin\\x64"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.2\\bin"
         - "C:\\WINDOWS\\system32"
@@ -1156,7 +1179,7 @@ events:
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/Platform/Windows-MSVC.cmake:546 (__windows_compiler_msvc_enable_rc)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/Platform/Windows-MSVC-C.cmake:5 (__windows_compiler_msvc)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeCInformation.cmake:48 (include)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_RC_COMPILER"
     description: "RC compiler"
@@ -1171,6 +1194,7 @@ events:
     names:
       - "rc"
     candidate_directories:
+      - "C:/Users/reysl/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/x64/"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/"
       - "C:/Windows/System32/"
@@ -1214,10 +1238,13 @@ events:
       - "D:/Developer/Libs/CMake/bin/"
       - "D:/Developer/Libs/CMake/sbin/"
       - "D:/Developer/Libs/CMake/"
-      - "C:/Program Files (x86)/Project/bin/"
-      - "C:/Program Files (x86)/Project/sbin/"
-      - "C:/Program Files (x86)/Project/"
+      - "C:/Program Files (x86)/liteweb-cpp-test/bin/"
+      - "C:/Program Files (x86)/liteweb-cpp-test/sbin/"
+      - "C:/Program Files (x86)/liteweb-cpp-test/"
     searched_directories:
+      - "C:/Users/reysl/AppData/Local/Programs/Microsoft VS Code/rc.com"
+      - "C:/Users/reysl/AppData/Local/Programs/Microsoft VS Code/rc.exe"
+      - "C:/Users/reysl/AppData/Local/Programs/Microsoft VS Code/rc"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/x64/rc.com"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/x64/rc.exe"
       - "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.2/bin/x64/rc"
@@ -1347,18 +1374,19 @@ events:
       - "D:/Developer/Libs/CMake/rc.com"
       - "D:/Developer/Libs/CMake/rc.exe"
       - "D:/Developer/Libs/CMake/rc"
-      - "C:/Program Files (x86)/Project/bin/rc.com"
-      - "C:/Program Files (x86)/Project/bin/rc.exe"
-      - "C:/Program Files (x86)/Project/bin/rc"
-      - "C:/Program Files (x86)/Project/sbin/rc.com"
-      - "C:/Program Files (x86)/Project/sbin/rc.exe"
-      - "C:/Program Files (x86)/Project/sbin/rc"
-      - "C:/Program Files (x86)/Project/rc.com"
-      - "C:/Program Files (x86)/Project/rc.exe"
-      - "C:/Program Files (x86)/Project/rc"
+      - "C:/Program Files (x86)/liteweb-cpp-test/bin/rc.com"
+      - "C:/Program Files (x86)/liteweb-cpp-test/bin/rc.exe"
+      - "C:/Program Files (x86)/liteweb-cpp-test/bin/rc"
+      - "C:/Program Files (x86)/liteweb-cpp-test/sbin/rc.com"
+      - "C:/Program Files (x86)/liteweb-cpp-test/sbin/rc.exe"
+      - "C:/Program Files (x86)/liteweb-cpp-test/sbin/rc"
+      - "C:/Program Files (x86)/liteweb-cpp-test/rc.com"
+      - "C:/Program Files (x86)/liteweb-cpp-test/rc.exe"
+      - "C:/Program Files (x86)/liteweb-cpp-test/rc"
     found: false
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\reysl\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.2\\bin\\x64"
         - "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.2\\bin"
         - "C:\\WINDOWS\\system32"
@@ -1394,73 +1422,74 @@ events:
         - "C:\\Users\\reysl\\AppData\\Local\\Python\\bin"
         - "C:\\Users\\reysl\\AppData\\Roaming\\npm"
         - "C:\\Users\\reysl\\.dotnet\\tools"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Project"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/liteweb-cpp-test"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
         - "C:/Program Files (x86)"
         - "D:/Developer/Libs/CMake"
-        - "C:/Program Files (x86)/Project"
+        - "C:/Program Files (x86)/liteweb-cpp-test"
   -
     kind: "try_compile-v1"
     backtrace:
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:3 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/CMakeScratch/TryCompile-16pf0r"
-      binary: "D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/CMakeScratch/TryCompile-16pf0r"
+      source: "D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/CMakeScratch/TryCompile-vi6afp"
+      binary: "D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/CMakeScratch/TryCompile-vi6afp"
     cmakeVariables:
-      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
-      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od"
+      CMAKE_EXE_LINKER_FLAGS: ""
     buildResult:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/CMakeScratch/TryCompile-16pf0r'
+        Change Dir: 'D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/CMakeScratch/TryCompile-vi6afp'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_eb04f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_6ba22.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.14.40+3e7442088 for .NET Framework
-        Build started 2026-05-07 6:46:15 AM.
+        Build started 2026-05-09 4:07:11 PM.
         
-        Project "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-16pf0r\\cmTC_eb04f.vcxproj" on node 1 (default targets).
+        Project "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vi6afp\\cmTC_6ba22.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_eb04f.dir\\Debug\\".
+          Creating directory "cmTC_6ba22.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-16pf0r\\Debug\\".
-          Creating directory "cmTC_eb04f.dir\\Debug\\cmTC_eb04f.tlog\\".
+          Creating directory "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vi6afp\\Debug\\".
+          Creating directory "cmTC_6ba22.dir\\Debug\\cmTC_6ba22.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_eb04f.dir\\Debug\\cmTC_eb04f.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_eb04f.dir\\Debug\\cmTC_eb04f.tlog\\unsuccessfulbuild".
+          Creating "cmTC_6ba22.dir\\Debug\\cmTC_6ba22.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_6ba22.dir\\Debug\\cmTC_6ba22.tlog\\unsuccessfulbuild".
         VcpkgTripletSelection:
           Using triplet "x64-windows" from "C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\"
           Using normalized configuration "Debug"
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_eb04f.dir\\Debug\\\\" /Fd"cmTC_eb04f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Developer\\Libs\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_6ba22.dir\\Debug\\\\" /Fd"cmTC_6ba22.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\Developer\\Libs\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35226 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /I"C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_eb04f.dir\\Debug\\\\" /Fd"cmTC_eb04f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Developer\\Libs\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
+          cl /c /I"C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_6ba22.dir\\Debug\\\\" /Fd"cmTC_6ba22.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\Developer\\Libs\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-16pf0r\\Debug\\cmTC_eb04f.exe" /INCREMENTAL /ILK:"cmTC_eb04f.dir\\Debug\\cmTC_eb04f.ilk" /NOLOGO /LIBPATH:"C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/CMakeScratch/TryCompile-16pf0r/Debug/cmTC_eb04f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/CMakeScratch/TryCompile-16pf0r/Debug/cmTC_eb04f.lib" /MACHINE:X64  /machine:x64 cmTC_eb04f.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_eb04f.vcxproj -> D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-16pf0r\\Debug\\cmTC_eb04f.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vi6afp\\Debug\\cmTC_6ba22.exe" /INCREMENTAL /ILK:"cmTC_6ba22.dir\\Debug\\cmTC_6ba22.ilk" /NOLOGO /LIBPATH:"C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/CMakeScratch/TryCompile-vi6afp/Debug/cmTC_6ba22.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/CMakeScratch/TryCompile-vi6afp/Debug/cmTC_6ba22.lib" /MACHINE:X64 cmTC_6ba22.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_6ba22.vcxproj -> D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vi6afp\\Debug\\cmTC_6ba22.exe
         AppLocalFromInstalled:
-          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\reysl\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-16pf0r\\Debug\\cmTC_eb04f.exe" "C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_eb04f.dir\\Debug\\cmTC_eb04f.tlog\\cmTC_eb04f.write.1u.tlog" "cmTC_eb04f.dir\\Debug\\vcpkg.applocal.log"
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\reysl\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vi6afp\\Debug\\cmTC_6ba22.exe" "C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_6ba22.dir\\Debug\\cmTC_6ba22.tlog\\cmTC_6ba22.write.1u.tlog" "cmTC_6ba22.dir\\Debug\\vcpkg.applocal.log"
           'pwsh.exe' is not recognized as an internal or external command,
           operable program or batch file.
-          The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\reysl\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-16pf0r\\Debug\\cmTC_eb04f.exe" "C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_eb04f.dir\\Debug\\cmTC_eb04f.tlog\\cmTC_eb04f.write.1u.tlog" "cmTC_eb04f.dir\\Debug\\vcpkg.applocal.log"" exited with code 9009.
-          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\reysl\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-16pf0r\\Debug\\cmTC_eb04f.exe" "C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_eb04f.dir\\Debug\\cmTC_eb04f.tlog\\cmTC_eb04f.write.1u.tlog" "cmTC_eb04f.dir\\Debug\\vcpkg.applocal.log"
+          The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\reysl\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vi6afp\\Debug\\cmTC_6ba22.exe" "C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_6ba22.dir\\Debug\\cmTC_6ba22.tlog\\cmTC_6ba22.write.1u.tlog" "cmTC_6ba22.dir\\Debug\\vcpkg.applocal.log"" exited with code 9009.
+          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\reysl\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vi6afp\\Debug\\cmTC_6ba22.exe" "C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_6ba22.dir\\Debug\\cmTC_6ba22.tlog\\cmTC_6ba22.write.1u.tlog" "cmTC_6ba22.dir\\Debug\\vcpkg.applocal.log"
         FinalizeBuildStatus:
-          Deleting file "cmTC_eb04f.dir\\Debug\\cmTC_eb04f.tlog\\unsuccessfulbuild".
-          Touching "cmTC_eb04f.dir\\Debug\\cmTC_eb04f.tlog\\cmTC_eb04f.lastbuildstate".
-        Done Building Project "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-16pf0r\\cmTC_eb04f.vcxproj" (default targets).
+          Deleting file "cmTC_6ba22.dir\\Debug\\cmTC_6ba22.tlog\\unsuccessfulbuild".
+          Touching "cmTC_6ba22.dir\\Debug\\cmTC_6ba22.tlog\\cmTC_6ba22.lastbuildstate".
+        Done Building Project "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vi6afp\\cmTC_6ba22.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:04.92
+        Time Elapsed 00:00:04.61
         
       exitCode: 0
   -
@@ -1468,7 +1497,7 @@ events:
     backtrace:
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
@@ -1486,7 +1515,7 @@ events:
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Running the C compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe" "-v"
       Microsoft (R) Incremental Linker Version 14.44.35226.0
@@ -1496,63 +1525,64 @@ events:
     backtrace:
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:3 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/CMakeScratch/TryCompile-7k02kn"
-      binary: "D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/CMakeScratch/TryCompile-7k02kn"
+      source: "D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/CMakeScratch/TryCompile-w054su"
+      binary: "D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/CMakeScratch/TryCompile-w054su"
     cmakeVariables:
-      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Ob0 /Od"
       CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
-      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_EXE_LINKER_FLAGS: ""
     buildResult:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/CMakeScratch/TryCompile-7k02kn'
+        Change Dir: 'D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/CMakeScratch/TryCompile-w054su'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_8bc5d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_2d6bc.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.14.40+3e7442088 for .NET Framework
-        Build started 2026-05-07 6:46:21 AM.
+        Build started 2026-05-09 4:07:15 PM.
         
-        Project "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7k02kn\\cmTC_8bc5d.vcxproj" on node 1 (default targets).
+        Project "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w054su\\cmTC_2d6bc.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_8bc5d.dir\\Debug\\".
+          Creating directory "cmTC_2d6bc.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7k02kn\\Debug\\".
-          Creating directory "cmTC_8bc5d.dir\\Debug\\cmTC_8bc5d.tlog\\".
+          Creating directory "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w054su\\Debug\\".
+          Creating directory "cmTC_2d6bc.dir\\Debug\\cmTC_2d6bc.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_8bc5d.dir\\Debug\\cmTC_8bc5d.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_8bc5d.dir\\Debug\\cmTC_8bc5d.tlog\\unsuccessfulbuild".
+          Creating "cmTC_2d6bc.dir\\Debug\\cmTC_2d6bc.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_2d6bc.dir\\Debug\\cmTC_2d6bc.tlog\\unsuccessfulbuild".
         VcpkgTripletSelection:
           Using triplet "x64-windows" from "C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\"
           Using normalized configuration "Debug"
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /GR /Fo"cmTC_8bc5d.dir\\Debug\\\\" /Fd"cmTC_8bc5d.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\Developer\\Libs\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Fo"cmTC_2d6bc.dir\\Debug\\\\" /Fd"cmTC_2d6bc.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "D:\\Developer\\Libs\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35226 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /I"C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /GR /Fo"cmTC_8bc5d.dir\\Debug\\\\" /Fd"cmTC_8bc5d.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\Developer\\Libs\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /I"C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Fo"cmTC_2d6bc.dir\\Debug\\\\" /Fd"cmTC_2d6bc.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "D:\\Developer\\Libs\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7k02kn\\Debug\\cmTC_8bc5d.exe" /INCREMENTAL /ILK:"cmTC_8bc5d.dir\\Debug\\cmTC_8bc5d.ilk" /NOLOGO /LIBPATH:"C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/CMakeScratch/TryCompile-7k02kn/Debug/cmTC_8bc5d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/CMakeScratch/TryCompile-7k02kn/Debug/cmTC_8bc5d.lib" /MACHINE:X64  /machine:x64 cmTC_8bc5d.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_8bc5d.vcxproj -> D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7k02kn\\Debug\\cmTC_8bc5d.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w054su\\Debug\\cmTC_2d6bc.exe" /INCREMENTAL /ILK:"cmTC_2d6bc.dir\\Debug\\cmTC_2d6bc.ilk" /NOLOGO /LIBPATH:"C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/CMakeScratch/TryCompile-w054su/Debug/cmTC_2d6bc.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/Developer/Projects/liteweb-cpp/tests/build/CMakeFiles/CMakeScratch/TryCompile-w054su/Debug/cmTC_2d6bc.lib" /MACHINE:X64 cmTC_2d6bc.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_2d6bc.vcxproj -> D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w054su\\Debug\\cmTC_2d6bc.exe
         AppLocalFromInstalled:
-          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\reysl\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7k02kn\\Debug\\cmTC_8bc5d.exe" "C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_8bc5d.dir\\Debug\\cmTC_8bc5d.tlog\\cmTC_8bc5d.write.1u.tlog" "cmTC_8bc5d.dir\\Debug\\vcpkg.applocal.log"
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\reysl\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w054su\\Debug\\cmTC_2d6bc.exe" "C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_2d6bc.dir\\Debug\\cmTC_2d6bc.tlog\\cmTC_2d6bc.write.1u.tlog" "cmTC_2d6bc.dir\\Debug\\vcpkg.applocal.log"
           'pwsh.exe' is not recognized as an internal or external command,
           operable program or batch file.
-          The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\reysl\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7k02kn\\Debug\\cmTC_8bc5d.exe" "C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_8bc5d.dir\\Debug\\cmTC_8bc5d.tlog\\cmTC_8bc5d.write.1u.tlog" "cmTC_8bc5d.dir\\Debug\\vcpkg.applocal.log"" exited with code 9009.
-          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\reysl\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7k02kn\\Debug\\cmTC_8bc5d.exe" "C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_8bc5d.dir\\Debug\\cmTC_8bc5d.tlog\\cmTC_8bc5d.write.1u.tlog" "cmTC_8bc5d.dir\\Debug\\vcpkg.applocal.log"
+          The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\reysl\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w054su\\Debug\\cmTC_2d6bc.exe" "C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_2d6bc.dir\\Debug\\cmTC_2d6bc.tlog\\cmTC_2d6bc.write.1u.tlog" "cmTC_2d6bc.dir\\Debug\\vcpkg.applocal.log"" exited with code 9009.
+          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\reysl\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w054su\\Debug\\cmTC_2d6bc.exe" "C:\\Users\\reysl\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_2d6bc.dir\\Debug\\cmTC_2d6bc.tlog\\cmTC_2d6bc.write.1u.tlog" "cmTC_2d6bc.dir\\Debug\\vcpkg.applocal.log"
         FinalizeBuildStatus:
-          Deleting file "cmTC_8bc5d.dir\\Debug\\cmTC_8bc5d.tlog\\unsuccessfulbuild".
-          Touching "cmTC_8bc5d.dir\\Debug\\cmTC_8bc5d.tlog\\cmTC_8bc5d.lastbuildstate".
-        Done Building Project "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7k02kn\\cmTC_8bc5d.vcxproj" (default targets).
+          Deleting file "cmTC_2d6bc.dir\\Debug\\cmTC_2d6bc.tlog\\unsuccessfulbuild".
+          Touching "cmTC_2d6bc.dir\\Debug\\cmTC_2d6bc.tlog\\cmTC_2d6bc.lastbuildstate".
+        Done Building Project "D:\\Developer\\Projects\\liteweb-cpp\\tests\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w054su\\cmTC_2d6bc.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.86
+        Time Elapsed 00:00:00.70
         
       exitCode: 0
   -
@@ -1560,7 +1590,7 @@ events:
     backtrace:
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
@@ -1578,7 +1608,7 @@ events:
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
       - "D:/Developer/Libs/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe" "-v"
       Microsoft (R) Incremental Linker Version 14.44.35226.0

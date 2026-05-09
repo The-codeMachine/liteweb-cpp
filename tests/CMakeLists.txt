@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 4.1)
 
+project(liteweb-cpp-test)
+
 add_library(liteweb-cpp STATIC IMPORTED)
+
+set(CMAKE_CXX_STANDARD 20)
 
 set(LITEWEB_ROOT ${CMAKE_SOURCE_DIR}/..)
 

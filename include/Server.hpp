@@ -4,6 +4,8 @@
 #include <httplib.h>
 #include <nlohmann/json.hpp>
 
+#include <string_view>
+
 namespace liteweb_cpp {
 
 	typedef httplib::Server::Handler Handler;
