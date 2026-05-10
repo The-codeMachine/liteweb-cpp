@@ -37,6 +37,8 @@ namespace liteweb_cpp {
 
 		void listen(const std::string& host, int port);
 
+		static json parseJson(const httplib::Request& req) noexcept;
+
 	private:
 		static std::string _load_html_content(const std::string& path);
 

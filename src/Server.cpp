@@ -2,6 +2,7 @@
 
 #include <filesystem>
 #include <fstream>
+#include <iostream>
 
 namespace liteweb_cpp {
 
@@ -30,7 +31,7 @@ namespace liteweb_cpp {
 
 		}
 		catch (const std::exception& e) {
-			_logger.log("There was an exception in the loadPage function, Server.cpp" + std::string(e.what()));
+			_logger.log("There was an exception in the loadPage function, Server.cpp: " + std::string(e.what()));
 		}
 
 		_srv.Get(route, [html_content](const httplib::Request& req, httplib::Response& res) {
@@ -50,11 +51,22 @@ namespace liteweb_cpp {
 		_srv.listen(host, port);
 	}
 
+	// converts the body of the request into json
+	json Server::parseJson(const httplib::Request& req) noexcept {
+		try {
+			return json::parse(req.body);
+		}
+		catch (const std::exception& e) {
+			// do nothing, no except
+			return json{ {"error", "Invalid JSON"} };
+		}
+	}
+
 	// loads the content of an HTML page into a string
 	std::string Server::_load_html_content(const std::string& path) {
 		std::filesystem::path p(path);
 
-		if (p.extension() != "html")
+		if (p.extension() != ".html")
 			throw std::runtime_error("File must be html");
 
 		std::ifstream file(p);
