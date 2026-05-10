@@ -1,16 +1,230 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LiteWeb C++ Test</title>
 
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #121212;
+            color: #f5f5f5;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #bbbbbb;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 8px;
+            border: 1px solid #444;
+            background-color: #181818;
+            color: white;
+            font-size: 15px;
+        }
+
+        .output {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #0f172a;
+            border: 1px solid #334155;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .success {
+            border-color: #16a34a;
+        }
+
+        .error {
+            border-color: #dc2626;
+        }
+    </style>
+</head>
 <body>
 
-    <h1>Example</h1>
+<div class="container">
+    <h1>LiteWeb C++ Test Page</h1>
+    <p>
+        This page tests:
+    </p>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.</p>
+    <ul>
+        <li>Static page loading</li>
+        <li>GET endpoints</li>
+        <li>POST endpoints</li>
+        <li>JSON parsing</li>
+        <li>Status code handling</li>
+        <li>Hot reloading in Development</li>
+    </ul>
+
+    <div class="card">
+        <h2>GET Test</h2>
+
+        <button onclick="testGetRequest()">
+            Test GET /cool_info/
+        </button>
+
+        <div id="getOutput" class="output">
+            Waiting for request...
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>POST Test</h2>
+
+        <label for="coolInput">
+            Enter something:
+        </label>
+
+        <input
+            id="coolInput"
+            type="text"
+            placeholder="Type something funny..."
+        />
+
+        <button onclick="testPostRequest()" style="margin-top: 15px;">
+            Test POST /funny_stuff/
+        </button>
+
+        <button onclick="testInvalidJson()" style="margin-top: 15px;">
+            Send Invalid JSON
+        </button>
+
+        <div id="postOutput" class="output">
+            Waiting for request...
+        </div>
+    </div>
+</div>
+
+<script>
+    async function testGetRequest() {
+        const output = document.getElementById("getOutput");
+
+        output.textContent = "Loading...";
+        output.className = "output";
+
+        try {
+            const response = await fetch("/cool_info");
+
+            const text = await response.text();
+
+            output.textContent =
+                "Status: " + response.status + "\n\n" +
+                "Response:\n" + text;
+
+            output.classList.add(response.ok ? "success" : "error");
+
+        } catch (err) {
+            output.textContent = "GET Request Failed:\n" + err;
+            output.classList.add("error");
+        }
+    }
+
+    async function testPostRequest() {
+        const output = document.getElementById("postOutput");
+        const input = document.getElementById("coolInput").value;
+
+        output.textContent = "Loading...";
+        output.className = "output";
+
+        try {
+            const response = await fetch("/funny_stuff", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    cool: input
+                })
+            });
+
+            const text = await response.text();
+
+            output.textContent =
+                "Status: " + response.status + "\n\n" +
+                "Response:\n" + text;
+
+            output.classList.add(response.ok ? "success" : "error");
+
+        } catch (err) {
+            output.textContent = "POST Request Failed:\n" + err;
+            output.classList.add("error");
+        }
+    }
+
+    async function testInvalidJson() {
+        const output = document.getElementById("postOutput");
+
+        output.textContent = "Sending invalid JSON...";
+        output.className = "output";
+
+        try {
+            const response = await fetch("/funny_stuff", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: "{ invalid json"
+            });
+
+            const text = await response.text();
+
+            output.textContent =
+                "Status: " + response.status + "\n\n" +
+                "Response:\n" + text;
+
+            output.classList.add(response.ok ? "success" : "error");
+
+        } catch (err) {
+            output.textContent = "Invalid JSON Test Failed:\n" + err;
+            output.classList.add("error");
+        }
+    }
+</script>
 
 </body>
-
 </html>

@@ -7,12 +7,12 @@ int main() {
 
     srv.loadPage("/", "resources/index_test.html");
 
-    srv.get("cool_info/", [](const httplib::Request& req, httplib::Response& res) {
+    srv.get("/cool_info", [](const httplib::Request& req, httplib::Response& res) {
         res.status = 200;
         res.set_content("Mankirat is really really fun to be around", "text/html");
     });
 
-    srv.post("funny_stuff/", [](const httplib::Request& req, httplib::Response& res) {
+    srv.post("/funny_stuff", [](const httplib::Request& req, httplib::Response& res) {
         auto json = liteweb_cpp::Server::parseJson(req);
         if (json.contains("error")) {
             res.status = 500;
