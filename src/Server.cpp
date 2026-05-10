@@ -2,7 +2,7 @@
 
 #include <filesystem>
 #include <fstream>
-#include <iostream>
+#include <mutex>
 
 namespace liteweb_cpp {
 
@@ -24,26 +24,13 @@ namespace liteweb_cpp {
 
 	// provides the functionality to make the server serve a page (with no authentication check)
 	void Server::loadPage(const std::string& route, const std::string& file_path) {
-		std::string html_content;
+		auto cache = _create_page_cache(file_path);
 
-		try {
-			html_content = _load_html_content(file_path);
+		_srv.Get(route, [this, cache, file_path](const httplib::Request& req, httplib::Response& res) {
+			_reload_page_if_needed(cache, file_path);
 
-		}
-		catch (const std::exception& e) {
-			_logger.log("There was an exception in the loadPage function, Server.cpp: " + std::string(e.what()));
-		}
-
-		_srv.Get(route, [html_content](const httplib::Request& req, httplib::Response& res) {
-			if (html_content.empty()) {
-				res.status = 404;
-				res.set_content("File was empty", "text/html");
-			}
-
-			res.status = 200;
-			res.set_content(html_content, "text/html");
-
-			});
+			_serve_cached_page(cache, res);
+		});
 	}
 
 	// makes the server start listening
@@ -79,6 +66,77 @@ namespace liteweb_cpp {
 
 		file.close();
 		return buff.str();
+	}
+
+	// creates a page cache
+	std::shared_ptr<PageCache> Server::_create_page_cache(const std::string& file_path) {
+		auto cache = std::make_shared<PageCache>();
+
+		try {
+			cache->html_content = _load_html_content(file_path);
+
+			if (std::filesystem::exists(file_path)) {
+				cache->last_write = std::filesystem::last_write_time(file_path);
+			}
+		}
+		catch (const std::exception& e) {
+			_logger.log("Failed to load page '" + file_path + "': " + e.what());
+		}
+
+		return cache;
+	}
+
+	// if the build is in release mode, it will not hot reload it
+	void Server::_reload_page_if_needed(const std::shared_ptr<PageCache>& cache, const std::string& file_path) {
+#ifndef NDEBUG
+
+		try {
+			if (!std::filesystem::exists(file_path)) {
+				return;
+			}
+
+			auto current_write = std::filesystem::last_write_time(file_path);
+
+			if (current_write <= cache->last_write) {
+				return;
+			}
+
+			std::string new_content = _load_html_content(file_path);
+
+			{
+				std::lock_guard<std::mutex> lock(cache->mutex);
+
+				cache->html_content = std::move(new_content);
+				cache->last_write = current_write;
+			}
+
+			_logger.log("Hot reloaded page: " + file_path);
+		}
+		catch (const std::exception& e) {
+			_logger.log("Hot reload failed for '" + file_path + "': " + e.what());
+		}
+#endif
+	}
+
+	// serves the cached page
+	void Server::_serve_cached_page(const std::shared_ptr<PageCache>& cache, httplib::Response& res) {
+		std::string content;
+
+		{
+			std::lock_guard<std::mutex> lock(cache->mutex);
+
+			content = cache->html_content;
+		}
+
+		if (content.empty()) {
+			res.status = 404;
+			res.set_content("File not found or empty", "text/html");
+
+			return;
+		}
+
+		res.status = 200;
+		res.set_content(content, "text/html");
 	}
 
 } // namespace liteweb_cpp

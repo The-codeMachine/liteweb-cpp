@@ -19,7 +19,18 @@ namespace liteweb_cpp {
 		Database& operator=(const Database&) = delete;
 		Database& operator=(Database&&) noexcept = delete;
 
+		template<typename... Args>
+		void enqueue(const std::string& stmt, Args&&... args) {
+
+		}
+
 	private:
+		template<typename... Args>
+		std::string _parse_stmt(const std::string& stmt, Args&&... args) {
+
+		}
+
+		void _enqueue(const std::string& stmt);
 
 	private:
 		uint32_t port;

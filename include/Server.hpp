@@ -11,6 +11,14 @@ namespace liteweb_cpp {
 	typedef httplib::Server::Handler Handler;
 	typedef nlohmann::json json;
 
+	struct PageCache {
+		std::mutex mutex;
+		std::filesystem::file_time_type last_write =
+			std::filesystem::file_time_type::min();
+
+		std::string html_content;
+	};
+
 	/// <summary>
 	/// 
 	/// Server is a wrapper class around Httplib's server class. It allows you
@@ -41,6 +49,10 @@ namespace liteweb_cpp {
 
 	private:
 		static std::string _load_html_content(const std::string& path);
+		
+		std::shared_ptr<PageCache> _create_page_cache(const std::string& file_path);
+		void _reload_page_if_needed(const std::shared_ptr<PageCache>& cache, const std::string& file_path);
+		void _serve_cached_page(const std::shared_ptr<PageCache>& cache, httplib::Response& res);
 
 	private:
 		httplib::Server _srv;
