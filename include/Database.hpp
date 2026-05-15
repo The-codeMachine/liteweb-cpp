@@ -1,17 +1,43 @@
 #pragma once
 
+#include <nlohmann/json.hpp>
+
+#include <atomic>
+#include <condition_variable>
+#include <cstdint>
+#include <mutex>
+#include <optional>
+#include <queue>
 #include <string>
+#include <thread>
+#include <vector>
 
 namespace liteweb_cpp {
 
+	struct DatabaseTask {
+		std::string message;
+		nlohmann::json payload;
+	};
+
 	/// <summary>
-	/// 
-	/// This database is designed for PostgreSQL 
-	/// 
+	///
+	/// PostgreSQL database proxy client.
+	///
+	/// This class communicates with the external
+	/// CPPPGDatabaseService over HTTP.
+	///
+	/// Thread-safe.
+	///
 	/// </summary>
 	class Database {
 	public:
-		explicit Database(std::string&& password, uint32_t threads = 1, uint32_t port = 5432);
+		explicit Database(
+			std::string password,
+			uint32_t workerThreads = 1,
+			std::string host = "http://localhost:6789"
+		);
+
+		~Database();
 
 		Database(const Database&) = delete;
 		Database(Database&&) noexcept = delete;
@@ -19,23 +45,37 @@ namespace liteweb_cpp {
 		Database& operator=(const Database&) = delete;
 		Database& operator=(Database&&) noexcept = delete;
 
-		template<typename... Args>
-		void enqueue(const std::string& stmt, Args&&... args) {
+		/// <summary>
+		///
+		/// Fire-and-forget asynchronous request.
+		///
+		/// </summary>
+		void enqueue(const std::string& message, const nlohmann::json& json);
 
-		}
+		/// <summary>
+		///
+		/// Synchronous request/response.
+		///
+		/// </summary>
+		nlohmann::json request(const std::string& message, const nlohmann::json& json);
 
 	private:
-		template<typename... Args>
-		std::string _parse_stmt(const std::string& stmt, Args&&... args) {
+		void workerThread();
 
-		}
-
-		void _enqueue(const std::string& stmt);
+		nlohmann::json sendRequest(const std::string& message, const nlohmann::json& json);
 
 	private:
-		uint32_t port;
-		uint32_t threads;
+		std::string _host;
+		std::string _password;
 
+		std::vector<std::thread> _workers;
+
+		std::queue<DatabaseTask> _queue;
+
+		std::mutex _mutex;
+		std::condition_variable _condition;
+
+		std::atomic<bool> _running = true;
 	};
 
 } // namespace liteweb_cpp

@@ -144,7 +144,6 @@
     <ClInclude Include="include\Database.hpp" />
     <ClInclude Include="include\Logger.hpp" />
     <ClInclude Include="include\Server.hpp" />
-    <ClInclude Include="include\ThreadSafeQueue.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Database.cpp" />
