@@ -1,20 +1,16 @@
-#include "Database.hpp"
+#include <Database.hpp>
 
 #include <httplib.h>
+
+#include <spdlog/sinks/rotating_file_sink.h>
 
 #include <stdexcept>
 #include <utility>
 
 namespace liteweb_cpp {
 
-	Database::Database(
-		std::string password,
-		uint32_t workerThreads,
-		std::string host
-	)
-		:
-		_host(std::move(host)),
-		_password(std::move(password)) {
+	Database::Database(std::string password, uint32_t workerThreads, std::string host) :
+		_host(std::move(host)), _password(std::move(password)) {
 
 		if (workerThreads == 0) {
 			throw std::invalid_argument("workerThreads cannot be 0.");
@@ -25,6 +21,14 @@ namespace liteweb_cpp {
 		for (uint32_t i = 0; i < workerThreads; ++i) {
 			_workers.emplace_back(&Database::workerThread, this);
 		}
+
+		auto sink = std::make_shared<spdlog::sinks::rotating_file_sink_mt>(
+			"logs/database_log.log",
+			1048576 * 10,
+			3
+		);
+
+		_logger = std::make_shared<liteweb_cpp::Logger>(sink, "database_logger");
 	}
 
 	Database::~Database() {
@@ -43,10 +47,7 @@ namespace liteweb_cpp {
 		{
 			std::lock_guard<std::mutex> lock(_mutex);
 
-			_queue.push({
-				message,
-				json
-				});
+			_queue.push({ message, json });
 		}
 
 		_condition.notify_one();
@@ -79,8 +80,7 @@ namespace liteweb_cpp {
 				sendRequest(task->message, task->payload);
 			}
 			catch (...) {
-				// TODO:
-				// Add proper logging here.
+				_logger->log("An error occurred in the Database worker thread while trying to send a request");
 			}
 		}
 	}
@@ -94,23 +94,14 @@ namespace liteweb_cpp {
 			{ "payload", json }
 		};
 
-		auto response = client.Post(
-			"/request",
-			requestBody.dump(),
-			"application/json"
-		);
+		auto response = client.Post("/request", requestBody.dump(), "application/json");
 
 		if (!response) {
-			throw std::runtime_error(
-				"Failed to connect to CPPPGDatabaseService."
-			);
+			throw std::runtime_error("Failed to connect to CPPPGDatabaseService.");
 		}
 
 		if (response->status != 200) {
-			throw std::runtime_error(
-				"Database service returned HTTP status: " +
-				std::to_string(response->status)
-			);
+			throw std::runtime_error("Database service returned HTTP status: " + std::to_string(response->status));
 		}
 
 		return nlohmann::json::parse(response->body);

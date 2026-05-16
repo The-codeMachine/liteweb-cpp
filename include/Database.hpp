@@ -1,4 +1,5 @@
 #pragma once
+#include <Logger.hpp>
 
 #include <nlohmann/json.hpp>
 
@@ -27,15 +28,13 @@ namespace liteweb_cpp {
 	/// CPPPGDatabaseService over HTTP.
 	///
 	/// Thread-safe.
+	/// 
+	/// Non-moveable, and non-copyable
 	///
 	/// </summary>
 	class Database {
 	public:
-		explicit Database(
-			std::string password,
-			uint32_t workerThreads = 1,
-			std::string host = "http://localhost:6789"
-		);
+		explicit Database(std::string password, uint32_t workerThreads = 1, std::string host = "http://localhost:6789");
 
 		~Database();
 
@@ -44,19 +43,24 @@ namespace liteweb_cpp {
 
 		Database& operator=(const Database&) = delete;
 		Database& operator=(Database&&) noexcept = delete;
-
+		
 		/// <summary>
 		///
 		/// Fire-and-forget asynchronous request.
-		///
+		/// 
 		/// </summary>
+		/// <param name="message"></param>
+		/// <param name="json"></param>
 		void enqueue(const std::string& message, const nlohmann::json& json);
-
+		
 		/// <summary>
-		///
+		/// 
 		/// Synchronous request/response.
-		///
+		/// 
 		/// </summary>
+		/// <param name="message"></param>
+		/// <param name="json"></param>
+		/// <returns></returns>
 		nlohmann::json request(const std::string& message, const nlohmann::json& json);
 
 	private:
@@ -76,6 +80,8 @@ namespace liteweb_cpp {
 		std::condition_variable _condition;
 
 		std::atomic<bool> _running = true;
+
+		std::shared_ptr<Logger> _logger;
 	};
 
 } // namespace liteweb_cpp
